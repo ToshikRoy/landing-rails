@@ -1,0 +1,142 @@
+<% provide(:title, 'Sign up') %>
+<header>
+  <div class="site-wrapper">
+    <div class="site-wrapper-inner">
+      <div class="cover-container">
+        <div class="inner cover">
+          <h1 class="cover-heading">Wer wir sind:
+          </h1>
+          <p class="lead">Wir sind ein schnell wachsendes Unternehmen aus den Vereinigten Staaten, und haben uns auf den Handel mit Bitcoins spezialisiert.</br>
+          Wir sind bereits in über 50 Ländern vertreten, unterstützen mehr als 190 Cryptowährungen und verfügen über einen hohen Kundenstamm.</p>
+      </div>
+    </div>
+  </div>
+</div>
+</header>
+<section>
+<div class="container first-part">
+  <div class="col-md-1">
+  </div>
+  <div class="col-md-4 col-sm-6 col-xs-12">
+      <div class="row pad">
+          <div class="about-item scrollpoint sp-effect2">
+                  <h3>Was wir wollen</h3>
+                  <p>Nun möchten wir unser Netz in Europa ausdehnen, besonders in Deutschland, da wir ab dem 2. Quartal 2017 einen hohen Zufluss an deutschen Kunden beobachten. </p>
+                  <p>Aus diesem Grund suchen wir nach Mitabeitern in Deutschland, um unsere Kunden vor Ort zu betreuen</p>
+          </div>
+      </div>
+  </div>
+  <div class="col-md-6 col-sm-6 col-xs-12 " >
+      <div class="row image">
+        <%= image_tag 'charts.png' %>
+      </div>
+  </div>
+  <div class="col-md-1">
+  </div>
+</div>
+  <div class="container second-part">
+  <div class="col-md-5 col-sm-5 col-xs-12">
+      <div class="row pad">
+        <div class="row pad">
+            <div class="about-item scrollpoint sp-effect2">
+                <div class="col-lg-12">
+                  <ul>
+                    <h3>Was wir bieten: </h3>
+                    <li>Flexible Arbeitszeiten (1-3 Stunden am Tag)</li>
+   <li>arbeiten von zu Hause aus, in Ihrer vertrauter Atmosphäre</li>
+   <li>Sed diem nonummy nibh euismod</li>
+   <li>überdurchnittlich hoher Verdienst (über 2400 Euro monatlich bereits in der Probezeit) und tägliche Auszahlungen</li>
+<li>Sed diem nonummy nibh euismod</li>
+  </ul>
+                </div>
+            </div>
+        </div>
+        <div class="row pad">
+            <div class="about-item scrollpoint sp-effect2">
+                <div class="col-lg-12">
+                    <h3>Voraussetzungen: </h3>
+                    <ul>
+
+                    <li>18 Jahre alt</li>
+   <li>mittelmäßige Computerkenntnisse</li>
+   <li>deutsch in Wort und Schrift</li>
+   <li>deutsches Bankkonto</li>
+  </ul>
+                </div>
+            </div>
+        </div>
+      </div>
+  </div>
+
+  <div class="col-md-7 col-sm-7 col-xs-12 " >
+      <div class="row form">
+        <%= bootstrap_form_for(@user, url: signup_path) do |f| %>
+          <%= render 'shared/error_messages' %>
+          <div class="row">
+            <div class="col-2 col-lg-2">
+          <%= f.select :sex, [["Herr"], ["Frau"]], { label: "Salutation:" }, { class: "selectpicker" } %>
+            </div>
+            <div class="col-5 col-lg-5">
+              <%= f.text_field :first_name, placeholder: "Varname", class: 'form-control' %>
+            </div>
+            <div class="col-5 col-lg-5">
+              <%= f.text_field :second_name, placeholder: "Nachname", class: "form-control" %>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-12 col-lg-12">
+              <%= f.email_field :email, placeholder: "E-mail Adresse", class: "form-control" %>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-12 col-lg-12">
+              <%= f.text_field :age, placeholder: "Alter", class: "form-control" %>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-6 col-lg-6">
+              <%= f.phone_field :phone_number, placeholder: "Telefonnumer", class: "form-control" %>
+            </div>
+            <div class="col-6 col-lg-6">
+              <%= f.text_field :time, placeholder: "Wenn verfügbar (von-to)", class: "form-control" %>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-12 col-lg-12">
+              <%= f.text_field :adress, placeholder: "Straße und Hausnummer bzw. Gebäudename", class: "form-control" %>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-3 col-lg-3">
+              <%= f.text_field :city_index, placeholder: "PLZ", class: "form-control" %>
+            </div>
+            <div class="col-9 col-lg-9">
+              <%= f.text_field :city_name, placeholder: "Ort", class: "form-control" %>
+            </div>
+          </div>
+          <%= f.submit "Create my account", class: "btn btn-lg btn-secondary" %>
+        <% end %>
+      </div>
+  </div>
+</div>
+</section>
+<footer>
+  <div class="site-wrapper">
+    <div class="site-wrapper-inner">
+      <div class="cover-container">
+        <div class="inner cover">
+          <h1 class="cover-heading">Ablauf:</h1>
+          <ul>
+          <li>Nach Ihrer Einstellung werden Sie als erstes eingeschult.</li>
+          <li>Sie werden von uns unterstützt und bekommen eine Schritt-für-Schritt- Anleitung.</li>
+          <li>Ein Mitarbeiter wird Sie persönlich betreuen und einführen.</li>
+          <li>Sie sichern Sie sich den Zugang zum schnellen und effektiven Erwerb von Coins in Deutschland und europaweit.</li>
+<li>Dabei tragen Sie keine Vorkosten.</li>
+          </ul>
+          <p class="lead">Nutzten Sie Ihre Chance in die Welt der Cryptowährungen einzusteigen und fangen Sie Ihre Karriere bei einem erfolgreichen Unternehmen an. </p>
+
+      </div>
+    </div>
+  </div>
+  </div>
+</footer>
